@@ -12,28 +12,26 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
+radius = 31.183
+height = 129.314
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 128, 128 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 695.283, 590.59 )
+position = Vector2( 302.742, 218.588 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="Player"]
-position = Vector2( -346.034, -441.904 )
+position = Vector2( -9.45093, -2.08325 )
 scale = Vector2( 0.177088, 0.177088 )
 frames = SubResource( 1 )
 animation = "jvacina"
-__meta__ = {
-"_edit_group_": true
-}
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -0.293213, 0.00805664 )
 shape = SubResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
