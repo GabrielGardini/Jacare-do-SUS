@@ -22,6 +22,7 @@ func _physics_process(delta):
 		move_and_slide(motion)
 	elif Input.is_action_pressed("ui_mouse_left_click"):
 		shooting()
+		
 	else:
 		motion.x = 0
 		motion.y = 0
@@ -30,7 +31,12 @@ func shooting():
 	var vac = vacina.instance()
 	owner.add_child(vac)
 	vac.transform = $Position2D.global_transform
+
 	
 	
 	
+	
+
+
+
 	
