@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/player/jvacina crop.png" type="Texture" id=1]
 [ext_resource path="res://Assets/player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/icon.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -12,14 +13,17 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 31.183
+radius = 43.2005
 height = 129.314
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32.002, 32.4111 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 128, 128 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 302.742, 218.588 )
+position = Vector2( 264.642, 206.326 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -33,5 +37,14 @@ animation = "jvacina"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -0.293213, 0.00805664 )
+position = Vector2( -17.1036, -4.85385 )
 shape = SubResource( 2 )
+
+[node name="enemy" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="enemy"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2( -0.148651, -0.148651 )
+shape = SubResource( 3 )
