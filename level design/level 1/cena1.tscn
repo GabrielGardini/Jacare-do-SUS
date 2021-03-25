@@ -16,7 +16,7 @@ animations = [ {
 radius = 43.2005
 height = 129.314
 
-[node name="Node2D" type="Node2D"]
+[node name="world" type="Node2D"]
 position = Vector2( 128, 128 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
