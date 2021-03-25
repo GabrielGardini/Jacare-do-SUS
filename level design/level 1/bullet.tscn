@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.477, 14.9547 )
 
-[node name="vacina" type="Area2D"]
+[node name="vacina" type="Area2D" groups=[
+"bullet",
+]]
 position = Vector2( 38.4276, -51.6568 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -22,3 +24,4 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.408752, -0.0362549 )
 shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_vacina_body_entered"]

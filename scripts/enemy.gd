@@ -14,9 +14,8 @@ func _physics_process(delta):
 	move = move_and_collide(move)
 	
 func _on_Area2D_body_entered(body):
-	if body != self:
+	if body.is_in_group("player1"):
 		player = body
-		
 
 func _on_Area2D_body_exited(body):
 	player = null
