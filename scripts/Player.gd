@@ -43,7 +43,7 @@ func flip_char():
 	var sprite_pos = $sprite.get_global_position()
 	if mouse_pos[0] < sprite_pos[0]:
 		$sprite.set_flip_h(false)
-	if mouse_pos[1] >= sprite_pos[1]:
+	else:
 		$sprite.set_flip_h(true)
 	pass
 func shooting():
