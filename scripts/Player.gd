@@ -15,8 +15,9 @@ var flip = false
 
 func _process(delta):
 	flip_char()
+	sprite_change()
 	pass
-
+	
 func _physics_process(delta):
 	#look_at(get_global_mouse_position())
 	if Input.is_action_pressed("ui_right"):
@@ -35,9 +36,9 @@ func _physics_process(delta):
 		timer.start(vac_delay)
 		shooting()
 	else:
+		#$sprite.set_frame(0)
 		motion.x = 0
 		motion.y = 0
-		
 func flip_char():
 	var mouse_pos = get_global_mouse_position()
 	var sprite_pos = $sprite.get_global_position()
@@ -60,3 +61,8 @@ func shooting():
 	#vac.set_rotation($".".get_rotation())
 	vac.look_at(get_global_mouse_position())
 	pass
+func sprite_change():
+	if timer.is_stopped():
+		$sprite.set_frame(0)
+	else:
+		$sprite.set_frame(1)
