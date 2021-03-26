@@ -18,4 +18,6 @@ func _on_Area2D_body_entered(body):
 		player = body
 
 func _on_Area2D_body_exited(body):
-	player = null
+	if body.is_in_group("player1"):
+		player = null
+	pass
