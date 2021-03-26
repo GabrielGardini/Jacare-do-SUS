@@ -18,14 +18,22 @@ __meta__ = {
 "_edit_horizontal_guides_": [ -7.0 ]
 }
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 307.883, 176.386 )
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 257.649, 147.936 )
 
-[node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 568.718, 150.401 )
+[node name="enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 610.109, 127.805 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 178.015, 384.286 )
+[node name="enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 451.288, 361.541 )
+
+[node name="virus" parent="." instance=ExtResource( 4 )]
+
+[node name="virus2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2.9967, 311.648 )
+
+[node name="virus3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 383.567, -17.9797 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -42,12 +50,3 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="virus" parent="CanvasLayer2/score_label" instance=ExtResource( 4 )]
-position = Vector2( -527.462, 134.102 )
-
-[node name="virus2" parent="CanvasLayer2/score_label" instance=ExtResource( 4 )]
-position = Vector2( -555.008, 398.968 )
-
-[node name="virus3" parent="CanvasLayer2/score_label" instance=ExtResource( 4 )]
-position = Vector2( -143.936, 129.864 )

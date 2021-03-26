@@ -15,7 +15,7 @@ animations = [ {
 radius = 43.2005
 height = 129.314
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="player" type="KinematicBody2D" groups=[
 "player1",
 ]]
 position = Vector2( 190.534, 134.601 )
@@ -24,14 +24,14 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -9.45093, -2.08325 )
 scale = Vector2( 0.177088, 0.177088 )
 frames = SubResource( 1 )
 animation = "jvacina"
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -17.1036, -4.85385 )
 shape = SubResource( 2 )
 
