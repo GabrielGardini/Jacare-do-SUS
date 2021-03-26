@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/virus.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemies/virus crop.png" type="Texture" id=2]
@@ -8,9 +8,6 @@ radius = 414.342
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 1196.15
-
-[sub_resource type="CircleShape2D" id=3]
-radius = 517.063
 
 [node name="virus" type="KinematicBody2D" groups=[
 "virus",
@@ -33,9 +30,3 @@ visible = false
 
 [node name="range_col" type="CollisionShape2D" parent="range"]
 shape = SubResource( 2 )
-
-[node name="hitbox" type="Area2D" parent="."]
-
-[node name="hitbox_col" type="CollisionShape2D" parent="hitbox"]
-shape = SubResource( 3 )
-[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/virus crop.png-46c0511d78fc6e6e73e2c5dbee4f9a37.stex"
+path="res://.import/virus crop.png-885e60acb3d0265149edd3db4bad732a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/virus crop.png"
-dest_files=[ "res://.import/virus crop.png-46c0511d78fc6e6e73e2c5dbee4f9a37.stex" ]
+source_file="res://assets/enemies/virus crop.png"
+dest_files=[ "res://.import/virus crop.png-885e60acb3d0265149edd3db4bad732a.stex" ]
 
 [params]
 
