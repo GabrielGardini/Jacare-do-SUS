@@ -43,13 +43,20 @@ func flip_char():
 	var sprite_pos = $sprite.get_global_position()
 	if mouse_pos[0] < sprite_pos[0]:
 		$sprite.set_flip_h(false)
+		flip = false
 	else:
 		$sprite.set_flip_h(true)
+		flip = true
 	pass
 func shooting():
 	var vac = prevac.instance()
+	var vac_pos = null
 	owner.add_child(vac)
-	vac.set_global_position($Position2D.get_global_position())
+	if flip == true:
+		vac_pos = $vacpos1
+	else:
+		vac_pos = $vacpos2
+	vac.set_global_position(vac_pos.get_global_position())
 	#vac.set_rotation($".".get_rotation())
 	vac.look_at(get_global_mouse_position())
 	pass

@@ -38,5 +38,8 @@ shape = SubResource( 2 )
 [node name="VacDelay" type="Timer" parent="."]
 one_shot = true
 
-[node name="Position2D" type="Position2D" parent="."]
+[node name="vacpos1" type="Position2D" parent="."]
 position = Vector2( 37.6109, -40.7893 )
+
+[node name="vacpos2" type="Position2D" parent="."]
+position = Vector2( -55.1543, -39.598 )
