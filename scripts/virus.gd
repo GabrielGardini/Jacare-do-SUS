@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-func _on_hitbox_body_entered(body):
-	if body.is_in_group("bullet"):
+
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("bullet"):
 		queue_free()
-	pass
+	pass # Replace with function body.
