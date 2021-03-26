@@ -14,7 +14,7 @@ var vac_delay = 0.5
 
 
 func _physics_process(delta):
-	look_at(get_global_mouse_position())
+	#look_at(get_global_mouse_position())
 	if Input.is_action_pressed("ui_right"):
 		motion.x = speed
 		move_and_slide(motion)
@@ -38,5 +38,6 @@ func shooting():
 	var vac = prevac.instance()
 	owner.add_child(vac)
 	vac.set_global_position($Position2D.get_global_position())
-	vac.set_rotation($".".get_rotation())
+	#vac.set_rotation($".".get_rotation())
+	vac.look_at(get_global_mouse_position())
 	pass
