@@ -11,7 +11,11 @@ var shot = 0
 var delta = delta
 onready var timer = $VacDelay
 var vac_delay = 0.5
+var flip = false
 
+func _process(delta):
+	flip_char()
+	pass
 
 func _physics_process(delta):
 	#look_at(get_global_mouse_position())
@@ -33,7 +37,15 @@ func _physics_process(delta):
 	else:
 		motion.x = 0
 		motion.y = 0
-
+		
+func flip_char():
+	var mouse_pos = get_global_mouse_position()
+	var sprite_pos = $sprite.get_global_position()
+	if mouse_pos[0] < sprite_pos[0]:
+		$sprite.set_flip_h(false)
+	if mouse_pos[1] >= sprite_pos[1]:
+		$sprite.set_flip_h(true)
+	pass
 func shooting():
 	var vac = prevac.instance()
 	owner.add_child(vac)
