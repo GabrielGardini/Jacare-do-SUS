@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/player/jvacina crop.png" type="Texture" id=2]
+[ext_resource path="res://assets/player/jvacina crop(no_vac).png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": false,
 "name": "jvacina",
 "speed": 5.0
 } ]
@@ -44,3 +45,4 @@ position = Vector2( 37.6109, -40.7893 )
 
 [node name="vacpos2" type="Position2D" parent="."]
 position = Vector2( -55.1543, -39.598 )
+[connection signal="timeout" from="VacDelay" to="." method="_on_VacDelay_timeout"]
