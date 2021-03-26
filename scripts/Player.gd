@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var motion = Vector2()
-const speed = 100
+export var speed = 100
 var prevac = preload("res://level design/level 1/bullet.tscn")
 #export (PackedScene) var vacina
 #onready var vacina = preload("res://level design/level 1/bullet.tscn")
@@ -10,7 +10,7 @@ var timing = 0.4
 var shot = 0
 var delta = delta
 onready var timer = $VacDelay
-var vac_delay = 0.5
+var vac_delay = 1
 var flip = false
 
 func _process(delta):

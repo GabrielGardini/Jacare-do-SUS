@@ -27,9 +27,12 @@ __meta__ = {
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 257.649, 147.936 )
+scale = Vector2( 0.5, 0.5 )
+speed = 100
 
 [node name="enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 613.446, 121.798 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="enemy_hitbox" type="Area2D" parent="enemy"]
 
@@ -37,11 +40,59 @@ position = Vector2( 613.446, 121.798 )
 position = Vector2( 22.6385, -24.3161 )
 shape = SubResource( 2 )
 
+[node name="enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 668.15, 323.963 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="enemy_hitbox" type="Area2D" parent="enemy2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2/enemy_hitbox"]
+position = Vector2( 22.6385, -24.3161 )
+shape = SubResource( 2 )
+
+[node name="enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 404.146, 357.261 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="enemy_hitbox" type="Area2D" parent="enemy3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3/enemy_hitbox"]
+position = Vector2( 22.6385, -24.3161 )
+shape = SubResource( 2 )
+
 [node name="virus" parent="." instance=ExtResource( 4 )]
+scale = Vector2( 0.05, 0.05 )
 
 [node name="virus_hitbox" type="Area2D" parent="virus"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="virus/virus_hitbox"]
+shape = SubResource( 3 )
+
+[node name="virus2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 33.2979, 318.708 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="virus_hitbox" type="Area2D" parent="virus2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="virus2/virus_hitbox"]
+shape = SubResource( 3 )
+
+[node name="virus3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 290.167, 30.9194 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="virus_hitbox" type="Area2D" parent="virus3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="virus3/virus_hitbox"]
+shape = SubResource( 3 )
+
+[node name="virus4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 630.28, -47.5684 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="virus_hitbox" type="Area2D" parent="virus4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="virus4/virus_hitbox"]
 shape = SubResource( 3 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
@@ -64,5 +115,13 @@ __meta__ = {
 stream = ExtResource( 7 )
 autoplay = true
 [connection signal="area_entered" from="enemy/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="area_entered" from="enemy2/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="area_entered" from="enemy3/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="virus/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus/virus_hitbox" to="virus" method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus2/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus2/virus_hitbox" to="virus2" method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus3/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus3/virus_hitbox" to="virus3" method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus4/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus4/virus_hitbox" to="virus4" method="_on_virus_hitbox_area_entered"]
