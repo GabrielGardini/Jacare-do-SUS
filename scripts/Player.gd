@@ -19,26 +19,30 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
-	#look_at(get_global_mouse_position())
-	if Input.is_action_pressed("ui_right"):
-		motion.x = speed
-		move_and_slide(motion)
-	if Input.is_action_pressed("ui_left"):
-		motion.x = -speed
-		move_and_slide(motion)
-	if Input.is_action_pressed("ui_up"):
-		motion.y = -speed
-		move_and_slide(motion)
-	if Input.is_action_pressed("ui_down"):
-		motion.y = speed
-		move_and_slide(motion)
-	if Input.is_action_pressed("ui_mouse_left_click") and timer.is_stopped():
-		timer.start(vac_delay)
-		shooting()
-	else:
-		#$sprite.set_frame(0)
-		motion.x = 0
-		motion.y = 0
+	movement()
+	pass
+func movement():
+		#look_at(get_global_mouse_position())
+		if Input.is_action_pressed("ui_right"):
+			motion.x = speed
+			move_and_slide(motion)
+		if Input.is_action_pressed("ui_left"):
+			motion.x = -speed
+			move_and_slide(motion)
+		if Input.is_action_pressed("ui_up"):
+			motion.y = -speed
+			move_and_slide(motion)
+		if Input.is_action_pressed("ui_down"):
+			motion.y = speed
+			move_and_slide(motion)
+		if Input.is_action_pressed("ui_mouse_left_click") and timer.is_stopped():
+			timer.start(vac_delay)
+			shooting()
+		else:
+			#$sprite.set_frame(0)
+			motion.x = 0
+			motion.y = 0
+
 func flip_char():
 	var mouse_pos = get_global_mouse_position()
 	var sprite_pos = $sprite.get_global_position()
