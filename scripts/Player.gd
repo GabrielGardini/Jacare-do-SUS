@@ -3,8 +3,6 @@ extends KinematicBody2D
 var motion = Vector2()
 export var speed = 100
 var prevac = preload("res://level design/level 1/bullet.tscn")
-#export (PackedScene) var vacina
-#onready var vacina = preload("res://level design/level 1/bullet.tscn")
 var vac_speed = 50
 var timing = 0.4
 var shot = 0
@@ -21,7 +19,7 @@ func _process(delta):
 func _physics_process(delta):
 	movement()
 	pass
-func movement():
+func movement():#Armazena os inputs relacionados a movimentação
 		#look_at(get_global_mouse_position())
 		if Input.is_action_pressed("ui_right"):
 			motion.x = speed
@@ -43,7 +41,7 @@ func movement():
 			motion.x = 0
 			motion.y = 0
 
-func flip_char():
+func flip_char():#Controla o flip do personagem com base na posição do mouse
 	var mouse_pos = get_global_mouse_position()
 	var sprite_pos = $sprite.get_global_position()
 	if mouse_pos[0] < sprite_pos[0]:
@@ -53,7 +51,7 @@ func flip_char():
 		$sprite.set_flip_h(true)
 		flip = true
 	pass
-func shooting():
+func shooting():#Função que define a vacina como tiro
 	var vac = prevac.instance()
 	var vac_pos = null
 	owner.add_child(vac)
@@ -65,7 +63,7 @@ func shooting():
 	#vac.set_rotation($".".get_rotation())
 	vac.look_at(get_global_mouse_position())
 	pass
-func sprite_change():
+func sprite_change(): #Função que define a troca de sprite durante o cooldown do tiro
 	if timer.is_stopped():
 		$sprite.set_frame(0)
 	else:

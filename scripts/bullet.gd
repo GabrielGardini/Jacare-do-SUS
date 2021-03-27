@@ -6,12 +6,12 @@ func _physics_process(delta):
 	position += transform.x * speed * delta
 	pass
 
-func _on_vacina_area_entered(area):
+func _on_vacina_area_entered(area):#Deleta a vacina no momento em que ela entra em contato com o virus
 	if area.is_in_group("virus"):
 		queue_free()
 	pass
 
-func _on_vacina_body_entered(body):
+func _on_vacina_body_entered(body):#Deleta a vacina no momento em que ela entra em contato com os agentes
 	if body.is_in_group("trash_can"):
 		queue_free()
 	pass # Replace with function body.

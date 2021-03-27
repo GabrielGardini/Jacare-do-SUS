@@ -13,11 +13,11 @@ func _physics_process(delta):
 	move = move.normalized()
 	move = move_and_collide(move)
 	
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(body):#Confere se o player está próximo ao agente
 	if body.is_in_group("player1"):
 		player = body
 
-func _on_Area2D_body_exited(body):
+func _on_Area2D_body_exited(body):#Função que define que se o player estiver longe, ele deve parar de segui-lo
 	if body.is_in_group("player1"):
 		player = null
 	pass
