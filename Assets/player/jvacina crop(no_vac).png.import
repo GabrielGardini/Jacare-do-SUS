@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jvacina crop(no_vac).png-f0bd3d71b753151f7cc17c2667e8de59.stex"
+path="res://.import/jvacina crop(no_vac).png-cb02e199fc3fd6d790b89f6826e4fde2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/jvacina crop(no_vac).png"
-dest_files=[ "res://.import/jvacina crop(no_vac).png-f0bd3d71b753151f7cc17c2667e8de59.stex" ]
+source_file="res://Assets/player/jvacina crop(no_vac).png"
+dest_files=[ "res://.import/jvacina crop(no_vac).png-cb02e199fc3fd6d790b89f6826e4fde2.stex" ]
 
 [params]
 

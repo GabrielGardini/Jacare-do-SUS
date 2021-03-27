@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vac.png-a11444b86c24c8ab5b14495523c5e44e.stex"
+path="res://.import/vac.png-a4e09cded1821cce19bf034ea6bd201e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vacina/vac.png"
-dest_files=[ "res://.import/vac.png-a11444b86c24c8ab5b14495523c5e44e.stex" ]
+source_file="res://Assets/vacina/vac.png"
+dest_files=[ "res://.import/vac.png-a4e09cded1821cce19bf034ea6bd201e.stex" ]
 
 [params]
 

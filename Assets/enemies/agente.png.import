@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/agente.png-646bf8b132e7896da7aafc9890f11eb2.stex"
+path="res://.import/agente.png-7a240b6556e8318baa5098bf6d5ec3b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/agente.png"
-dest_files=[ "res://.import/agente.png-646bf8b132e7896da7aafc9890f11eb2.stex" ]
+source_file="res://Assets/enemies/agente.png"
+dest_files=[ "res://.import/agente.png-7a240b6556e8318baa5098bf6d5ec3b6.stex" ]
 
 [params]
 

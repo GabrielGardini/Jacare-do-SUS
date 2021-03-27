@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/agente crop.png-2e5d39ccf255435428cc3923b67b85b5.stex"
+path="res://.import/agente crop.png-f23e89b46847f9d10f1caa5d2d404d27.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/agente crop.png"
-dest_files=[ "res://.import/agente crop.png-2e5d39ccf255435428cc3923b67b85b5.stex" ]
+source_file="res://Assets/enemies/agente crop.png"
+dest_files=[ "res://.import/agente crop.png-f23e89b46847f9d10f1caa5d2d404d27.stex" ]
 
 [params]
 
