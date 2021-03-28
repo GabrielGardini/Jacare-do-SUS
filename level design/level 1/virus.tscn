@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/virus.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemies/virus crop.png" type="Texture" id=2]
+[ext_resource path="res://Assets/SoundFX/kill_virus.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 414.342
@@ -22,13 +23,13 @@ __meta__ = {
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
 
-[node name="virus_hitbox" type="Area2D" parent="."]
+[node name="virus_hitbox" type="Area2D" parent="." groups=[
+"virus",
+]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="virus_hitbox"]
-visible = false
 shape = SubResource( 1 )
 
 [node name="range" type="Area2D" parent="."]
@@ -38,5 +39,8 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="virus_timer" type="Timer" parent="."]
+
+[node name="virus_kill" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 [connection signal="area_entered" from="virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="timeout" from="virus_timer" to="." method="_on_virus_timer_timeout"]
