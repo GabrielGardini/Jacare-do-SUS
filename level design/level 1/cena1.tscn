@@ -64,6 +64,12 @@ shape = SubResource( 1 )
 
 [node name="virus" parent="." instance=ExtResource( 4 )]
 
+[node name="virus2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 545.559, 9.43872 )
+
+[node name="virus3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 313.366, 373.774 )
+
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="score_label" type="Label" parent="CanvasLayer2"]
@@ -124,10 +130,19 @@ position = Vector2( -527.282, -322.372 )
 rotation = -1.5708
 scale = Vector2( 0.6, 1 )
 shape = SubResource( 4 )
+
+[node name="spawn_timer" type="Timer" parent="."]
 [connection signal="area_entered" from="enemy/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="enemy2/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="enemy3/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="virus/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus2/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus3/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="finished" from="virus_kill" to="." method="_on_som_finished"]
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 
 [editable path="virus"]
+
+[editable path="virus2"]
+
+[editable path="virus3"]
