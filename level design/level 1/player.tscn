@@ -53,4 +53,6 @@ position = Vector2( -55.1543, -39.598 )
 [node name="collisionShape2D2" type="CollisionShape2D" parent="player_hitbox"]
 position = Vector2( -11.4404, -4.85385 )
 shape = SubResource( 2 )
-[connection signal="timeout" from="VacDelay" to="." method="_on_VacDelay_timeout"]
+
+[node name="wont_move" type="Timer" parent="."]
+[connection signal="area_entered" from="player_hitbox" to="." method="_on_player_hitbox_area_entered"]

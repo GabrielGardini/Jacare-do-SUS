@@ -1,5 +1,5 @@
 extends KinematicBody2D
-var speed = 1
+var speed = 10
 var virus_delay = 1
 var random_x = 10
 var random_y = 10

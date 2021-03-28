@@ -69,7 +69,5 @@ func sprite_change(): #Função que define a troca de sprite durante o cooldown 
 	else:
 		$sprite.set_frame(1)
 		
-
-
 func _on_player_hitbox_area_entered(area):
 	pass # Replace with function body.
