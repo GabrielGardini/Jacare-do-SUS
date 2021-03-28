@@ -17,7 +17,7 @@ func _process(delta):
 func _on_enemy_hitbox_area_entered(area):#Pontua negativamente caso a vacina entre em contato com o agente
 	if area.is_in_group("bullet"):
 		$shot_trash.play() 
-		points -= 100
+		points -= 1000
 		if points <= 0:
 			points = 0
 		$CanvasLayer2/score_label.set_text("score: "+str(points))

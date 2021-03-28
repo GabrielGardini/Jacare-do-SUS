@@ -13,11 +13,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.8622, 79.2285 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 27
 font_data = ExtResource( 2 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 506.65, 15.1643 )
 
 [node name="world" type="Node2D"]
@@ -82,7 +82,7 @@ margin_top = 14.1842
 margin_right = 997.74
 margin_bottom = 89.1842
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "score: 0"
 align = 2
 script = ExtResource( 5 )
@@ -108,7 +108,7 @@ position = Vector2( 517.979, 623.029 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen_limit/below"]
 position = Vector2( -6.08331, -10.8109 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="right" type="KinematicBody2D" parent="Screen_limit"]
 position = Vector2( 517.979, 623.029 )
@@ -117,14 +117,14 @@ position = Vector2( 517.979, 623.029 )
 position = Vector2( 520.753, -316.459 )
 rotation = -1.5708
 scale = Vector2( 0.6, 1 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="left" type="KinematicBody2D" parent="Screen_limit"]
 position = Vector2( 517.979, 623.029 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen_limit/left"]
 position = Vector2( -8.27936, -636.241 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="above" type="KinematicBody2D" parent="Screen_limit"]
 position = Vector2( 517.979, 623.029 )
@@ -133,7 +133,7 @@ position = Vector2( 517.979, 623.029 )
 position = Vector2( -527.282, -322.372 )
 rotation = -1.5708
 scale = Vector2( 0.6, 1 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="spawn_timer" type="Timer" parent="."]
 [connection signal="area_entered" from="enemy/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
