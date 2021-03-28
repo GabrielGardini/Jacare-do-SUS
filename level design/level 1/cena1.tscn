@@ -32,33 +32,19 @@ position = Vector2( 257.649, 147.936 )
 scale = Vector2( 0.5, 0.5 )
 speed = 100
 
+[node name="player_hitbox" parent="player" index="5" groups=[
+"player1",
+]]
+
 [node name="enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 617.221, 114.719 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="enemy_hitbox" type="Area2D" parent="enemy"]
+[node name="enemy_hitbox" type="Area2D" parent="enemy" groups=[
+"trash_can",
+]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/enemy_hitbox"]
-position = Vector2( 21.6945, -31.8671 )
-shape = SubResource( 1 )
-
-[node name="enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 503.859, 287.411 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="enemy_hitbox" type="Area2D" parent="enemy2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2/enemy_hitbox"]
-position = Vector2( 21.6945, -31.8671 )
-shape = SubResource( 1 )
-
-[node name="enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 697.741, 329.79 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="enemy_hitbox" type="Area2D" parent="enemy3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3/enemy_hitbox"]
 position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
@@ -160,15 +146,18 @@ scale = Vector2( 0.6, 1 )
 shape = SubResource( 3 )
 
 [node name="spawn_timer" type="Timer" parent="."]
+
+[node name="reload_timer" type="Timer" parent="."]
+[connection signal="area_entered" from="player/player_hitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_entered" from="enemy/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
-[connection signal="area_entered" from="enemy2/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
-[connection signal="area_entered" from="enemy3/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="virus/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus2/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus3/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus4/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="Screen_limit/limit" to="." method="_on_limit_area_entered"]
 [connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
+
+[editable path="player"]
 
 [editable path="virus"]
 
