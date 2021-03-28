@@ -11,6 +11,7 @@ func _ready():
 	pass
 	
 func _process(delta):
+
 	if virus_hitbox != null:
 		virus_hitbox.connect("area_entered",self,"_on_virus_hitbox_area_entered")
 	pass	
@@ -44,9 +45,7 @@ func _on_limit_area_entered(area):
 		pass # Replace with function body.
 
 func _on_player_hitbox_area_entered(area):
-	if area.is_in_group("trash_can"):
-		player.queue_free()
-		get_tree().reload_current_scene()
+
 	pass # Replace with function body.
 
 	
