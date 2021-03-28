@@ -11,7 +11,7 @@
 [ext_resource path="res://Assets/SoundFX/shot_trash.ogg" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56.4126, 59.9258 )
+extents = Vector2( 46.8622, 79.2285 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 526.098
@@ -36,36 +36,33 @@ scale = Vector2( 0.5, 0.5 )
 speed = 100
 
 [node name="enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 613.446, 121.798 )
+position = Vector2( 617.221, 114.719 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="enemy_hitbox" type="Area2D" parent="enemy"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/enemy_hitbox"]
-position = Vector2( 22.6385, -24.3161 )
+position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
-[node name="shot_trash" type="AudioStreamPlayer" parent="enemy"]
-stream = ExtResource( 9 )
-
 [node name="enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 668.15, 323.963 )
+position = Vector2( 503.859, 287.411 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="enemy_hitbox" type="Area2D" parent="enemy2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2/enemy_hitbox"]
-position = Vector2( 22.6385, -24.3161 )
+position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
 [node name="enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 404.146, 357.261 )
+position = Vector2( 697.741, 329.79 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="enemy_hitbox" type="Area2D" parent="enemy3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3/enemy_hitbox"]
-position = Vector2( 22.6385, -24.3161 )
+position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
 [node name="virus" parent="." instance=ExtResource( 4 )]
@@ -75,9 +72,6 @@ scale = Vector2( 0.05, 0.05 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="virus/virus_hitbox"]
 shape = SubResource( 2 )
-
-[node name="virus_kill" type="AudioStreamPlayer" parent="virus"]
-stream = ExtResource( 8 )
 
 [node name="virus2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 33.2979, 318.708 )
@@ -122,10 +116,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="shot_trash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
 [node name="background_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -19.185
 autoplay = true
+
+[node name="virus_kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [node name="Screen_limit" type="Node" parent="."]
 
@@ -166,10 +166,10 @@ shape = SubResource( 4 )
 [connection signal="area_entered" from="virus/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus/virus_hitbox" to="virus" method="_on_virus_hitbox_area_entered"]
 [connection signal="area_exited" from="virus/virus_hitbox" to="." method="_on_virus_hitbox_area_exited"]
-[connection signal="finished" from="virus/virus_kill" to="." method="_on_som_finished"]
 [connection signal="area_entered" from="virus2/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus2/virus_hitbox" to="virus2" method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus3/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus3/virus_hitbox" to="virus3" method="_on_virus_hitbox_area_entered"]
-[connection signal="area_entered" from="virus4/virus_hitbox" to="virus4" method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus4/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="virus4/virus_hitbox" to="virus4" method="_on_virus_hitbox_area_entered"]
+[connection signal="finished" from="virus_kill" to="." method="_on_som_finished"]

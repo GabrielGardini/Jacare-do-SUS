@@ -2,7 +2,7 @@ extends Node2D
 var points = 0
 func _on_enemy_hitbox_area_entered(area):#Pontua negativamente caso a vacina entre em contato com o agente
 	if area.is_in_group("bullet"):
-		$enemy/shot_trash.play() 
+		$shot_trash.play() 
 		points -= 100
 		if points <= 0:
 			points = 0
@@ -14,20 +14,5 @@ func _on_virus_hitbox_area_entered(area):#Pontua positivamente caso a vacina ent
 	if area.is_in_group("bullet"):
 		points += 100
 		$CanvasLayer2/score_label.set_text("score: "+str(points))
-		$virus/virus_kill.play() 
-		
+		$virus_kill.play()
 
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-func _on_virus_hitbox_area_exited(area):
-	if area.is_in_group("bullet"):
-		$virus/som.stop()
-		
