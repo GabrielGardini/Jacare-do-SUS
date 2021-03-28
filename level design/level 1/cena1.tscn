@@ -62,6 +62,18 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
+[node name="virus" parent="." instance=ExtResource( 4 )]
+position = Vector2( 104, 256 )
+
+[node name="virus2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 280, 24 )
+
+[node name="virus3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 416, 232 )
+
+[node name="virus4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 432, 72 )
+
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="score_label" type="Label" parent="CanvasLayer2"]
@@ -85,6 +97,9 @@ stream = ExtResource( 9 )
 stream = ExtResource( 7 )
 volume_db = -19.185
 autoplay = true
+
+[node name="virus_kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [node name="Screen_limit" type="Node" parent="."]
 
@@ -121,29 +136,14 @@ scale = Vector2( 0.6, 1 )
 shape = SubResource( 4 )
 
 [node name="spawn_timer" type="Timer" parent="."]
-
-[node name="virus" parent="." instance=ExtResource( 4 )]
-position = Vector2( 104, 256 )
-
-[node name="virus2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 280, 24 )
-
-[node name="virus3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 416, 232 )
-
-[node name="virus4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 432, 72 )
-
-[node name="virus_kill" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
 [connection signal="area_entered" from="enemy/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="enemy2/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="enemy3/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
-[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="area_entered" from="virus/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus2/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus3/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus4/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 
 [editable path="virus"]
 
