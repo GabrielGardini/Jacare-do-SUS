@@ -35,3 +35,10 @@ func _on_spawn_timer_timeout():
 	virus_hitbox = virus.get_child(2)
 	virus.set_global_position(Vector2(rand_range(0,1016),rand_range(0,575)))
 	pass # Replace with function body.
+
+
+func _on_limit_area_entered(area):
+		if area.is_in_group("bullet"):
+			points -= 100
+			$CanvasLayer2/score_label.set_text("score: "+str(points))
+		pass # Replace with function body.

@@ -135,6 +135,30 @@ rotation = -1.5708
 scale = Vector2( 0.6, 1 )
 shape = SubResource( 3 )
 
+[node name="limit" type="Area2D" parent="Screen_limit" groups=[
+"wall",
+]]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Screen_limit/limit"]
+position = Vector2( 511.896, 612.218 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Screen_limit/limit"]
+position = Vector2( 1038.73, 306.57 )
+rotation = -1.5708
+scale = Vector2( 0.6, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Screen_limit/limit"]
+position = Vector2( 509.7, -13.212 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Screen_limit/limit"]
+position = Vector2( -9.30298, 300.657 )
+rotation = -1.5708
+scale = Vector2( 0.6, 1 )
+shape = SubResource( 3 )
+
 [node name="spawn_timer" type="Timer" parent="."]
 [connection signal="area_entered" from="enemy/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_entered" from="enemy2/enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
@@ -143,6 +167,7 @@ shape = SubResource( 3 )
 [connection signal="area_entered" from="virus2/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus3/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="area_entered" from="virus4/virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
+[connection signal="area_entered" from="Screen_limit/limit" to="." method="_on_limit_area_entered"]
 [connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 
 [editable path="virus"]
