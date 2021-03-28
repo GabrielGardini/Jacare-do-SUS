@@ -12,7 +12,7 @@ radius = 1196.15
 [node name="virus" type="KinematicBody2D" groups=[
 "virus",
 ]]
-scale = Vector2( 0.15, 0.15 )
+scale = Vector2( 0.075, 0.075 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -21,7 +21,13 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="virus_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="virus_hitbox"]
 visible = false
 shape = SubResource( 1 )
 
@@ -32,4 +38,5 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="virus_timer" type="Timer" parent="."]
+[connection signal="area_entered" from="virus_hitbox" to="." method="_on_virus_hitbox_area_entered"]
 [connection signal="timeout" from="virus_timer" to="." method="_on_virus_timer_timeout"]
