@@ -92,6 +92,7 @@ autoplay = true
 
 [node name="virus_kill" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -18.0
 
 [node name="Screen_limit" type="Node" parent="."]
 
