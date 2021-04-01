@@ -18,7 +18,7 @@ _global_script_class_icons={
 config/name="Jacaré do SUS"
 run/main_scene="res://level design/level 1/cena1.tscn"
 config/icon="res://Assets/icon.png"
-config/windows_native_icon="res://icon.ico"
+config/windows_native_icon="res://jacare.ico"
 
 [input]
 

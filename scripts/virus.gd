@@ -19,6 +19,6 @@ func _on_virus_hitbox_area_entered(area):#Tira o virus da cena caso ele seja ati
 
 
 func _on_virus_timer_timeout():
-	random_x = rand_range(-50,50)
-	random_y = rand_range(-50,50)
+	random_x = rand_range(-100,100)
+	random_y = rand_range(-100,100)
 	pass # Replace with function body.
