@@ -20,6 +20,8 @@ func _physics_process(delta):
 	movement()
 	pass
 func movement():#Armazena os inputs relacionados a movimentação
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://menu.tscn")
 	if Input.is_action_pressed("ui_right"):
 		motion.x = speed
 		move_and_slide(motion)
