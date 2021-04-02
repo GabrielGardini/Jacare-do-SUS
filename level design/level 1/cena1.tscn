@@ -189,8 +189,10 @@ offset = Vector2( 35, 15 )
 transform = Transform2D( 1, 0, 0, 1, 35, 15 )
 
 [node name="ESC" type="Label" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 5.0
+margin_top = 1.0
+margin_right = 65.0
+margin_bottom = 84.0
 custom_fonts/font = SubResource( 5 )
 text = "Esc
 "

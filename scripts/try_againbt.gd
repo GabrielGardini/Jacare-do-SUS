@@ -7,8 +7,11 @@ func _ready():
 func _process(delta):
 	if self.disabled == false:
 		reload_timer.wait_time = 2
-		get_tree().paused = true 
-
+		get_tree().paused = true
+		 
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://menu.tscn")
+	
 func _on_player_hitbox_area_entered(area):
 	if area.is_in_group("trash_can"):
 		#get_tree().change_scene("res://level design/level 1/cena1.tscn")
