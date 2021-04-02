@@ -10,7 +10,9 @@ func _process(delta):
 		get_tree().paused = true
 		 
 	if Input.is_action_pressed("ui_cancel"):
+		get_tree().paused = false
 		get_tree().change_scene("res://menu.tscn")
+		
 	
 func _on_player_hitbox_area_entered(area):
 	if area.is_in_group("trash_can"):
