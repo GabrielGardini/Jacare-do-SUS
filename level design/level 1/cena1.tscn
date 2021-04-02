@@ -19,7 +19,7 @@ size = 27
 font_data = ExtResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 506.65, 15.1643 )
+extents = Vector2( 506.65, 16 )
 
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
@@ -105,14 +105,14 @@ stream = ExtResource( 8 )
 position = Vector2( 517.979, 623.029 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen_limit/below"]
-position = Vector2( -6.08331, -10.8109 )
+position = Vector2( -5.979, -47.029 )
 shape = SubResource( 3 )
 
 [node name="right" type="KinematicBody2D" parent="Screen_limit"]
 position = Vector2( 517.979, 623.029 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen_limit/right"]
-position = Vector2( 520.753, -316.459 )
+position = Vector2( 490.021, -327.029 )
 rotation = -1.5708
 scale = Vector2( 0.6, 1 )
 shape = SubResource( 3 )
@@ -121,16 +121,16 @@ shape = SubResource( 3 )
 position = Vector2( 517.979, 623.029 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen_limit/left"]
-position = Vector2( -8.27936, -636.241 )
+position = Vector2( -493.979, -327.029 )
+rotation = -1.5708
+scale = Vector2( 0.6, 1 )
 shape = SubResource( 3 )
 
 [node name="above" type="KinematicBody2D" parent="Screen_limit"]
 position = Vector2( 517.979, 623.029 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen_limit/above"]
-position = Vector2( -527.282, -322.372 )
-rotation = -1.5708
-scale = Vector2( 0.6, 1 )
+position = Vector2( -5.979, -615.029 )
 shape = SubResource( 3 )
 
 [node name="limit" type="Area2D" parent="Screen_limit" groups=[
@@ -138,23 +138,23 @@ shape = SubResource( 3 )
 ]]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Screen_limit/limit"]
-position = Vector2( 511.896, 612.218 )
+position = Vector2( 512, 576 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Screen_limit/limit"]
-position = Vector2( 1038.73, 306.57 )
+position = Vector2( 1008, 296 )
 rotation = -1.5708
 scale = Vector2( 0.6, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Screen_limit/limit"]
-position = Vector2( 509.7, -13.212 )
+position = Vector2( 24, 296 )
+rotation = -1.5708
+scale = Vector2( 0.6, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Screen_limit/limit"]
-position = Vector2( -9.30298, 300.657 )
-rotation = -1.5708
-scale = Vector2( 0.6, 1 )
+position = Vector2( 512, 8 )
 shape = SubResource( 3 )
 
 [node name="spawn_timer" type="Timer" parent="."]

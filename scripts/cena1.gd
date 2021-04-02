@@ -40,6 +40,7 @@ func _on_limit_area_entered(area):
 			points -= 100
 			if points <= 0:
 				points = 0
+			$shot_trash.play()
 			$CanvasLayer2/score_label.set_text("score: "+str(points))
 		pass # Replace with function body.
 	
