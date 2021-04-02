@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/levels/level1/background1.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 46.8622, 79.2285 )
+extents = Vector2( 46.8622, 83.8996 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 27
@@ -38,7 +38,7 @@ __meta__ = {
 }
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 257.649, 147.936 )
+position = Vector2( 449.904, 166.278 )
 scale = Vector2( 0.5, 0.5 )
 speed = 100
 
@@ -60,7 +60,7 @@ position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
 [node name="enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 16, 384 )
+position = Vector2( 33.3263, 365.811 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="enemy_hitbox" type="Area2D" parent="enemy2" groups=[
