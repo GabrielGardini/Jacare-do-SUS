@@ -72,9 +72,9 @@ scale = Vector2( 1.16, 1 )
 position = Vector2( 21.6945, -31.8671 )
 shape = SubResource( 1 )
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="score" type="CanvasLayer" parent="."]
 
-[node name="score_label" type="Label" parent="CanvasLayer2"]
+[node name="score_label" type="Label" parent="score"]
 margin_left = 661.735
 margin_top = 14.1842
 margin_right = 997.74
@@ -184,11 +184,11 @@ __meta__ = {
 position = Vector2( 512.578, 297.669 )
 texture = ExtResource( 11 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="esc" type="CanvasLayer" parent="."]
 offset = Vector2( 35, 15 )
 transform = Transform2D( 1, 0, 0, 1, 35, 15 )
 
-[node name="ESC" type="Label" parent="CanvasLayer"]
+[node name="ESC" type="Label" parent="esc"]
 margin_left = 5.0
 margin_top = 1.0
 margin_right = 65.0
