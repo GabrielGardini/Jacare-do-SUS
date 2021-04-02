@@ -12,6 +12,7 @@ func _process(delta):
 func _on_player_hitbox_area_entered(area):
 	if area.is_in_group("trash_can"):
 		#get_tree().change_scene("res://level design/level 1/cena1.tscn")
+		player.queue_free()
 		self.visible = true 
 		self.disabled = false
 		
