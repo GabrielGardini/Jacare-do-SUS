@@ -1,4 +1,6 @@
 extends Node2D
+onready var wont_move = $player/wont_move
+onready var player = $player
 var points = 0
 var PRE_VIRUS = preload("res://level design/level 1/virus.tscn")
 var spawn_delay = 2
@@ -36,11 +38,18 @@ func _on_spawn_timer_timeout():
 	pass # Replace with function body.
 
 func _on_limit_area_entered(area):
-		if area.is_in_group("bullet"):
-			points -= 100
-			if points <= 0:
-				points = 0
-			$shot_trash.play()
-			$score/score_label.set_text("score: "+str(points))
-		pass # Replace with function body.
-	
+	if area.is_in_group("bullet"):
+		points -= 100
+		if points <= 0:
+			points = 0
+		$shot_trash.play()
+		$score/score_label.set_text("score: "+str(points))
+	pass # Replace with function body.
+
+# func _on_player_hitbox_area_entered(area):
+# 	if area.is_in_group("virus"):
+# 		wont_move.start(1)
+# 		player.PAUSE_MODE_PROCESS
+# 	elif wont_move.is_stopped():
+# 		player.PAUSE_MODE_STOP
+# 	pass # Replace with function body.
