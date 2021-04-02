@@ -12,6 +12,7 @@ radius = 1196.15
 [node name="virus" type="KinematicBody2D" groups=[
 "virus",
 ]]
+show_behind_parent = true
 scale = Vector2( 0.075, 0.075 )
 script = ExtResource( 1 )
 __meta__ = {

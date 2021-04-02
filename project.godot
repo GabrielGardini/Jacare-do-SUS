@@ -20,6 +20,10 @@ run/main_scene="res://menu.tscn"
 config/icon="res://Assets/icon.png"
 config/windows_native_icon="res://jacare.ico"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 ui_left={
