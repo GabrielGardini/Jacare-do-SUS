@@ -2,7 +2,7 @@
 
 **Este jogo foi criado para a Chocolate Game Jam, promovida pela Gamux, Entidade Estudantil da Universidade Estadual de Campinas.**
 
-Neste jogo você controlará Zé vacina, que está em uma luta sem fim contra o vírus e agentes do governo durante uma campanha de imunização.
+Neste jogo você controlará Zé Vacina, que está em uma luta sem fim contra o vírus e agentes do governo durante uma campanha de imunização.
 
 ## 💰 Pontuação: 
  * Você **ganha** 100 pontos ao acertar corretamente a vacina em um vírus. 
