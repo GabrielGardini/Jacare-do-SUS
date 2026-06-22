@@ -12,3 +12,5 @@ Neste jogo você controlará Zé Vacina, que está em uma luta sem fim contra o 
 ## 🎮 Controles:
 * `w`, `a`,`s`, `d` movimentam o personagem.
 * `botão esquerdo do mouse` lança vacina.
+
+Disponível em https://pvskp.itch.io/jacar-do-sus
